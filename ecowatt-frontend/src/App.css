@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f6f8;
+  color: #0f172a;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* HEADER */
+.header {
+  margin-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  font-size: 34px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.brand p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.energy-card,
+.co2-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.energy-value {
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.energy-value span {
+  font-size: 20px;
+  color: #64748b;
+  margin-left: 6px;
+}
+
+.energy-label {
+  margin-top: 6px;
+  color: #64748b;
+}
+
+.co2-title {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.co2-value {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+
+.co2-sub {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* METRICS */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.metric {
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.metric label {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.metric strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+/* TOGGLE */
+.toggle {
+  margin-top: 12px;
+  width: 110px;
+  height: 42px;
+  background: #e5e7eb;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.toggle.on {
+  background: #22c55e;
+}
+
+.toggle-knob {
+  width: 34px;
+  height: 34px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+
+.toggle.on .toggle-knob {
+  transform: translateX(64px);
+}
+
+.toggle-text {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  pointer-events: none;
+}
+
+/* CHART */
+.chart {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.chart-buttons button {
+  background: transparent;
+  border: none;
+  margin-left: 10px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.chart-buttons button.active {
+  background: #0ea5a4;
+  color: white;
+}
+
+.drift-card {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: white;
+  border-radius: 16px;
+  padding: 18px;
+  text-align: center;
+}
+
+.drift-card strong {
+  font-size: 1.6rem;
+  display: block;
+  margin-top: 6px;
+}
+
+.drift-card small {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.drift-sub {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+/* co2 thing 3 */
+/* 🌍 Equivalents */
+.equivalents {
+  margin-top: 40px;
+  padding: 24px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #ffffff, #f6f7f9);
+}
+
+.equivalents h3 {
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.equivalent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.equivalent-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.equivalent-card:hover {
+  transform: translateY(-4px);
+}
+
+.eq-icon {
+  font-size: 26px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.equivalent-card strong {
+  font-size: 20px;
+  display: block;
+}
+
+.equivalent-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* 🎚 Impact badge */
+.impact-badge {
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.impact-badge.low {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.impact-badge.medium {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.impact-badge.high {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  font-family: inherit;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-radius: 14px;
+  overflow: hidden;
+  background: white;
+}
+
+.chat-header {
+  background: #0ea5a4;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.msg {
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 85%;
+}
+
+.msg.bot {
+  background: #f1f5f9;
+}
+
+.msg.user {
+  background: #0ea5a4;
+  color: white;
+  margin-left: auto;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #eee;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.chat-input button {
+  background: #0ea5a4;
+  color: white;
+  border: none;
+  padding: 0 16px;
+}
